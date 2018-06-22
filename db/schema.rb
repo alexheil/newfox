@@ -88,8 +88,8 @@ ActiveRecord::Schema.define(version: 20180622194937) do
     t.datetime "updated_at",                            null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["latitude"], name: "index_users_on_latitude", unique: true
-    t.index ["longitude"], name: "index_users_on_longitude", unique: true
+    t.index ["latitude"], name: "index_users_on_latitude"
+    t.index ["longitude"], name: "index_users_on_longitude"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["slug"], name: "index_users_on_slug", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
