@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20180622194937) do
     t.string   "county"
     t.string   "incorporated"
     t.string   "population"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "slug"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -28,8 +30,8 @@ ActiveRecord::Schema.define(version: 20180622194937) do
   create_table "pins", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "place_id"
-    t.string   "latitude"
-    t.string   "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -43,10 +45,10 @@ ActiveRecord::Schema.define(version: 20180622194937) do
     t.string   "address"
     t.string   "phone_number"
     t.integer  "type"
-    t.string   "latitude"
-    t.string   "longitude"
-    t.string   "latitude_range"
-    t.string   "longitude_range"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.float    "latitude_range"
+    t.float    "longitude_range"
     t.integer  "points"
     t.string   "slug"
     t.datetime "created_at",      null: false
@@ -80,8 +82,8 @@ ActiveRecord::Schema.define(version: 20180622194937) do
     t.boolean  "review_email",           default: true
     t.boolean  "comment_email",          default: true
     t.boolean  "message_email",          default: true
-    t.string   "latitude",               default: ""
-    t.string   "longitude",              default: ""
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

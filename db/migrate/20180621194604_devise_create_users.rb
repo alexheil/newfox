@@ -41,8 +41,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.boolean :comment_email, default: true
       t.boolean :message_email, default: true
 
-      t.string :latitude, default: ""
-      t.string :longitude, default: ""
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps null: false
     end

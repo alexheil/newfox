@@ -3,8 +3,8 @@ class CreatePins < ActiveRecord::Migration[5.0]
     create_table :pins do |t|
       t.references :user
       t.references :place
-      t.string :latitude
-      t.string :longitude
+      t.float :latitude
+      t.float :longitude
       t.integer :points
 
       t.timestamps

@@ -7,7 +7,7 @@ or
 <%= link_to 'sign in', new_user_session_path %>
 
 <% if user_signed_in? %>
-  <%= current_user.username %>
+  <%= link_to current_user.username, user_path(current_user) %>
   <%= current_user.current_sign_in_ip %>
-  <%= current_user.request.location.city %>
+  <%= Geocoder.search("Buffalo, New York").first.coordinates %>
 <% end %>
