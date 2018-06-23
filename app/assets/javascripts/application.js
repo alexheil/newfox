@@ -15,3 +15,25 @@
 //= require turbolinks
 //= require_tree .
 
+
+var getLocation = function() {
+  
+  var x = document.getElementById("demo");
+
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+
+  function showPosition(position) {
+      // Do something with the coordinates
+
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+  }
+
+};
+
+$(document).ready(getLocation);
+$(document).on('turbolinks:load', getLocation);
