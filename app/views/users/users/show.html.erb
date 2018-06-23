@@ -1,3 +1,12 @@
+<button onclick="getLocation()">Try It</button>
+
+<div id="demo"></div>
+
+<%= @user.username %>
+<%= @user.current_sign_in_ip %>
+<%= @user.latitude %>
+<%= @user.longitude %>
+
 <script>
 var x = document.getElementById("demo");
 function getLocation() {
@@ -12,10 +21,3 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude; 
 }
 </script>
-
-<div id="demo"></div>
-
-<%= @user.username %>
-<%= @user.current_sign_in_ip %>
-<%= @user.latitude %>
-<%= @user.longitude %>
