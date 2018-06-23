@@ -1,0 +1,11 @@
+<%= form_for(@place, url: city_places_path) do |f| %>
+
+  <%= f.label :title %></br>
+  <%= f.text_field :title %>
+
+  <%= f.label :address %></br>
+  <%= f.text_field :address %>
+  
+ <%= f.submit "Create place" %>
+
+<% end %>
